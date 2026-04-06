@@ -1,0 +1,1204 @@
+{
+  "questions": [
+    {
+      "query": "Which of the following is a valid Python variable name?",
+      "choices": {
+        "A": "2count",
+        "B": "_my_var",
+        "C": "my-var",
+        "D": "class"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.1 — Data Types & Variables"
+    },
+    {
+      "query": "What is the data type of the value 3.14 in Python?",
+      "choices": {
+        "A": "int",
+        "B": "str",
+        "C": "float",
+        "D": "complex"
+      },
+      "correctAnswer": "C",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.1 — Data Types & Variables"
+    },
+    {
+      "query": "What will type(True) return?",
+      "choices": {
+        "A": "<class 'int'>",
+        "B": "<class 'bool'>",
+        "C": "<class 'str'>",
+        "D": "<class 'object'>"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.1 — Data Types & Variables"
+    },
+    {
+      "query": "Which statement correctly assigns an integer value to x?",
+      "choices": {
+        "A": "x = '5'",
+        "B": "x = 5.0",
+        "C": "x = 5",
+        "D": "x = int"
+      },
+      "correctAnswer": "C",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.1 — Data Types & Variables"
+    },
+    {
+      "query": "What is the result of: x = 10; x += 3; print(x)?",
+      "choices": {
+        "A": "10",
+        "B": "3",
+        "C": "13",
+        "D": "30"
+      },
+      "correctAnswer": "C",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.1 — Data Types & Variables"
+    },
+    {
+      "query": "What does the // operator do in Python?",
+      "choices": {
+        "A": "Divides and returns a float",
+        "B": "Performs floor division",
+        "C": "Calculates modulus",
+        "D": "Raises to a power"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.2 — Numeric Operators"
+    },
+    {
+      "query": "What is the result of 17 % 5?",
+      "choices": {
+        "A": "3",
+        "B": "2",
+        "C": "3.4",
+        "D": "12"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.2 — Numeric Operators"
+    },
+    {
+      "query": "What is the result of 2 ** 8?",
+      "choices": {
+        "A": "16",
+        "B": "256",
+        "C": "128",
+        "D": "64"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.2 — Numeric Operators"
+    },
+    {
+      "query": "What is the value of 7 // 2?",
+      "choices": {
+        "A": "3.5",
+        "B": "4",
+        "C": "3",
+        "D": "2"
+      },
+      "correctAnswer": "C",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.2 — Numeric Operators"
+    },
+    {
+      "query": "Which operator has the highest precedence?",
+      "choices": {
+        "A": "+",
+        "B": "*",
+        "C": "**",
+        "D": "//"
+      },
+      "correctAnswer": "C",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.2 — Numeric Operators"
+    },
+    {
+      "query": "Which method converts all characters of a string to uppercase?",
+      "choices": {
+        "A": "str.upper()",
+        "B": "str.capitalize()",
+        "C": "str.title()",
+        "D": "str.to_upper()"
+      },
+      "correctAnswer": "A",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.3 — Strings"
+    },
+    {
+      "query": "What does 'Python'[1:4] return?",
+      "choices": {
+        "A": "'Pyt'",
+        "B": "'yth'",
+        "C": "'ytho'",
+        "D": "'ytho'"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.3 — Strings"
+    },
+    {
+      "query": "What is the result of len('Hello')?",
+      "choices": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "Error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.3 — Strings"
+    },
+    {
+      "query": "Which escape sequence represents a newline?",
+      "choices": {
+        "A": "\\t",
+        "B": "\\r",
+        "C": "\\n",
+        "D": "\\b"
+      },
+      "correctAnswer": "C",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.3 — Strings"
+    },
+    {
+      "query": "What does 'abc' * 2 produce?",
+      "choices": {
+        "A": "'abc2'",
+        "B": "'abcabc'",
+        "C": "Error",
+        "D": "6"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.3 — Strings"
+    },
+    {
+      "query": "What does the input() function always return?",
+      "choices": {
+        "A": "int",
+        "B": "float",
+        "C": "str",
+        "D": "bool"
+      },
+      "correctAnswer": "C",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.4 — Input / Output"
+    },
+    {
+      "query": "Which print() argument suppresses the default newline?",
+      "choices": {
+        "A": "sep=''",
+        "B": "end=''",
+        "C": "flush=True",
+        "D": "newline=False"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.4 — Input / Output"
+    },
+    {
+      "query": "What is the output of: print(1, 2, 3, sep='-')?",
+      "choices": {
+        "A": "1 2 3",
+        "B": "1-2-3",
+        "C": "123",
+        "D": "1,2,3"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.4 — Input / Output"
+    },
+    {
+      "query": "How do you convert a string '42' to an integer?",
+      "choices": {
+        "A": "str(42)",
+        "B": "int('42')",
+        "C": "float('42')",
+        "D": "num('42')"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.4 — Input / Output"
+    },
+    {
+      "query": "What does print(type(3 + 2.0)) output?",
+      "choices": {
+        "A": "<class 'int'>",
+        "B": "<class 'float'>",
+        "C": "<class 'complex'>",
+        "D": "<class 'str'>"
+      },
+      "correctAnswer": "B",
+      "section": "Section 1: Computer Programming & Python Fundamentals",
+      "subsection": "1.4 — Input / Output"
+    },
+    {
+      "query": "What is the result of: 5 > 3 and 2 < 1?",
+      "choices": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "Error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.1 — Boolean Logic & Comparisons"
+    },
+    {
+      "query": "What does not True evaluate to?",
+      "choices": {
+        "A": "True",
+        "B": "False",
+        "C": "0",
+        "D": "None"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.1 — Boolean Logic & Comparisons"
+    },
+    {
+      "query": "Which comparison operator checks equality?",
+      "choices": {
+        "A": "=",
+        "B": "!=",
+        "C": "==",
+        "D": "=>"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.1 — Boolean Logic & Comparisons"
+    },
+    {
+      "query": "What is True or False?",
+      "choices": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "Error"
+      },
+      "correctAnswer": "A",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.1 — Boolean Logic & Comparisons"
+    },
+    {
+      "query": "What is the result of: bool(0)?",
+      "choices": {
+        "A": "True",
+        "B": "False",
+        "C": "0",
+        "D": "None"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.1 — Boolean Logic & Comparisons"
+    },
+    {
+      "query": "What will print when x = 5: if x > 10: print('A') elif x > 3: print('B') else: print('C')?",
+      "choices": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "Nothing"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.2 — if / elif / else"
+    },
+    {
+      "query": "Which keyword is used for an alternative condition after if?",
+      "choices": {
+        "A": "else if",
+        "B": "elseif",
+        "C": "elif",
+        "D": "otherwise"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.2 — if / elif / else"
+    },
+    {
+      "query": "Is an else clause required when using if?",
+      "choices": {
+        "A": "Yes",
+        "B": "No",
+        "C": "Only with elif",
+        "D": "Only in loops"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.2 — if / elif / else"
+    },
+    {
+      "query": "What is the output of: x = 0; print('yes') if x else print('no')?",
+      "choices": {
+        "A": "yes",
+        "B": "no",
+        "C": "0",
+        "D": "Error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.2 — if / elif / else"
+    },
+    {
+      "query": "Which value is considered falsy in Python?",
+      "choices": {
+        "A": "1",
+        "B": "' '",
+        "C": "[]",
+        "D": "-1"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.2 — if / elif / else"
+    },
+    {
+      "query": "How many times does this loop execute: i=0; while i<3: i+=1?",
+      "choices": {
+        "A": "0",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.3 — while Loops"
+    },
+    {
+      "query": "What does a break statement do inside a loop?",
+      "choices": {
+        "A": "Skips to the next iteration",
+        "B": "Exits the loop immediately",
+        "C": "Restarts the loop",
+        "D": "Throws an error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.3 — while Loops"
+    },
+    {
+      "query": "What does continue do inside a loop?",
+      "choices": {
+        "A": "Exits the loop",
+        "B": "Skips the rest of the current iteration",
+        "C": "Pauses execution",
+        "D": "Restarts from the top"
+      },
+      "correctAnswer": "B",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.3 — while Loops"
+    },
+    {
+      "query": "What happens when a while loop condition is never False?",
+      "choices": {
+        "A": "Loop runs once",
+        "B": "Loop runs twice",
+        "C": "Infinite loop",
+        "D": "SyntaxError"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.3 — while Loops"
+    },
+    {
+      "query": "What does the else clause on a while loop execute?",
+      "choices": {
+        "A": "When the loop body is skipped",
+        "B": "When break exits the loop",
+        "C": "When the condition becomes False normally",
+        "D": "Every iteration"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.3 — while Loops"
+    },
+    {
+      "query": "What does range(5) produce?",
+      "choices": {
+        "A": "1 through 5",
+        "B": "0 through 5",
+        "C": "0 through 4",
+        "D": "1 through 4"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.4 — for Loops"
+    },
+    {
+      "query": "What is the output of: for i in range(2, 5): print(i, end=' ')?",
+      "choices": {
+        "A": "2 3 4",
+        "B": "2 3 4 5",
+        "C": "1 2 3 4",
+        "D": "0 1 2 3"
+      },
+      "correctAnswer": "A",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.4 — for Loops"
+    },
+    {
+      "query": "What does range(0, 10, 2) generate?",
+      "choices": {
+        "A": "Even numbers 0–8",
+        "B": "Even numbers 2–10",
+        "C": "All numbers 0–10",
+        "D": "Odd numbers 1–9"
+      },
+      "correctAnswer": "A",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.4 — for Loops"
+    },
+    {
+      "query": "Can a for loop iterate over a string?",
+      "choices": {
+        "A": "No",
+        "B": "Only if it's a number string",
+        "C": "Yes, character by character",
+        "D": "Only with split()"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.4 — for Loops"
+    },
+    {
+      "query": "What does pass do inside a loop?",
+      "choices": {
+        "A": "Exits the loop",
+        "B": "Breaks the loop on condition",
+        "C": "Does nothing; acts as a placeholder",
+        "D": "Raises an error"
+      },
+      "correctAnswer": "C",
+      "section": "Section 2: Control Flow — Conditionals & Loops",
+      "subsection": "2.4 — for Loops"
+    },
+    {
+      "query": "Which method adds an item to the end of a list?",
+      "choices": {
+        "A": "list.add()",
+        "B": "list.insert()",
+        "C": "list.append()",
+        "D": "list.push()"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.1 — Lists"
+    },
+    {
+      "query": "What does list.pop() return?",
+      "choices": {
+        "A": "The first element",
+        "B": "The last element",
+        "C": "None",
+        "D": "The list length"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.1 — Lists"
+    },
+    {
+      "query": "What is the result of: [1,2,3][1]?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "[2]"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.1 — Lists"
+    },
+    {
+      "query": "How do you reverse a list in place?",
+      "choices": {
+        "A": "list.reverse()",
+        "B": "reversed(list)",
+        "C": "list[::-1]",
+        "D": "list.sort(reverse)"
+      },
+      "correctAnswer": "A",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.1 — Lists"
+    },
+    {
+      "query": "What is the output of: len([1,[2,3],4])?",
+      "choices": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.1 — Lists"
+    },
+    {
+      "query": "Which of the following correctly defines a tuple?",
+      "choices": {
+        "A": "t = [1,2,3]",
+        "B": "t = {1,2,3}",
+        "C": "t = (1,2,3)",
+        "D": "t = <1,2,3>"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.2 — Tuples"
+    },
+    {
+      "query": "Tuples are:",
+      "choices": {
+        "A": "Mutable",
+        "B": "Immutable",
+        "C": "Always sorted",
+        "D": "Indexed from 1"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.2 — Tuples"
+    },
+    {
+      "query": "What does tuple packing mean?",
+      "choices": {
+        "A": "Converting a list to a tuple",
+        "B": "Assigning multiple values to one variable",
+        "C": "Sorting a tuple",
+        "D": "Zipping two tuples"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.2 — Tuples"
+    },
+    {
+      "query": "What is the result of: (1,2,3)[0]?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Error"
+      },
+      "correctAnswer": "A",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.2 — Tuples"
+    },
+    {
+      "query": "Can you add elements to a tuple after creation?",
+      "choices": {
+        "A": "Yes with append()",
+        "B": "Yes with +=",
+        "C": "No",
+        "D": "Only with extend()"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.2 — Tuples"
+    },
+    {
+      "query": "How do you access the value for key 'age' in: d = {'name':'Alice', 'age':30}?",
+      "choices": {
+        "A": "d.age",
+        "B": "d[age]",
+        "C": "d['age']",
+        "D": "d.get_value('age')"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.3 — Dictionaries"
+    },
+    {
+      "query": "Which method returns all keys of a dictionary?",
+      "choices": {
+        "A": "dict.keys()",
+        "B": "dict.values()",
+        "C": "dict.items()",
+        "D": "dict.list()"
+      },
+      "correctAnswer": "A",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.3 — Dictionaries"
+    },
+    {
+      "query": "What happens if you assign a value to an existing key in a dict?",
+      "choices": {
+        "A": "A new key is added",
+        "B": "An error is raised",
+        "C": "The old value is overwritten",
+        "D": "Nothing changes"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.3 — Dictionaries"
+    },
+    {
+      "query": "Which of the following can be a dictionary key?",
+      "choices": {
+        "A": "[1,2]",
+        "B": "{1,2}",
+        "C": "(1,2)",
+        "D": "{'a':1}"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.3 — Dictionaries"
+    },
+    {
+      "query": "How do you remove key 'x' from dict d?",
+      "choices": {
+        "A": "d.remove('x')",
+        "B": "del d['x']",
+        "C": "d.delete('x')",
+        "D": "d.pop_key('x')"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.3 — Dictionaries"
+    },
+    {
+      "query": "Which of the following creates an empty set?",
+      "choices": {
+        "A": "{}",
+        "B": "set()",
+        "C": "[]",
+        "D": "empty_set()"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.4 — Sets"
+    },
+    {
+      "query": "What property is unique to sets?",
+      "choices": {
+        "A": "Ordered",
+        "B": "Mutable",
+        "C": "No duplicate values",
+        "D": "Indexed"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.4 — Sets"
+    },
+    {
+      "query": "What does set1 & set2 compute?",
+      "choices": {
+        "A": "Union",
+        "B": "Intersection",
+        "C": "Difference",
+        "D": "Symmetric difference"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.4 — Sets"
+    },
+    {
+      "query": "Which method adds an element to a set?",
+      "choices": {
+        "A": ".append()",
+        "B": ".push()",
+        "C": ".add()",
+        "D": ".insert()"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.4 — Sets"
+    },
+    {
+      "query": "What is len({1,1,2,2,3})?",
+      "choices": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "2"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.4 — Sets"
+    },
+    {
+      "query": "What does 'hello world'.split() return?",
+      "choices": {
+        "A": "['h','e','l','l','o']",
+        "B": "['hello','world']",
+        "C": "('hello','world')",
+        "D": "'hello' 'world'"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.5 — String Methods"
+    },
+    {
+      "query": "What does '-'.join(['a','b','c']) return?",
+      "choices": {
+        "A": "'a b c'",
+        "B": "'abc'",
+        "C": "'a-b-c'",
+        "D": "['a-b-c']"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.5 — String Methods"
+    },
+    {
+      "query": "What does 'Hello'.lower() return?",
+      "choices": {
+        "A": "'hello'",
+        "B": "'HELLO'",
+        "C": "'Hello'",
+        "D": "None"
+      },
+      "correctAnswer": "A",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.5 — String Methods"
+    },
+    {
+      "query": "What does ' hi '.strip() return?",
+      "choices": {
+        "A": "' hi '",
+        "B": "'hi'",
+        "C": "'hi '",
+        "D": "' hi'"
+      },
+      "correctAnswer": "B",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.5 — String Methods"
+    },
+    {
+      "query": "What does 'banana'.count('a') return?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correctAnswer": "C",
+      "section": "Section 3: Data Collections — Lists, Tuples, Dicts & Strings",
+      "subsection": "3.5 — String Methods"
+    },
+    {
+      "query": "Which keyword defines a function in Python?",
+      "choices": {
+        "A": "function",
+        "B": "define",
+        "C": "def",
+        "D": "func"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.1 — Defining & Calling Functions"
+    },
+    {
+      "query": "What does a function return when no return statement is present?",
+      "choices": {
+        "A": "0",
+        "B": "''",
+        "C": "None",
+        "D": "False"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.1 — Defining & Calling Functions"
+    },
+    {
+      "query": "What is a default parameter value?",
+      "choices": {
+        "A": "A parameter that cannot be changed",
+        "B": "A value used when no argument is passed",
+        "C": "The first argument passed",
+        "D": "A global variable"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.1 — Defining & Calling Functions"
+    },
+    {
+      "query": "What is the output of: def f(x, y=2): return x*y; print(f(3))?",
+      "choices": {
+        "A": "3",
+        "B": "6",
+        "C": "2",
+        "D": "Error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.1 — Defining & Calling Functions"
+    },
+    {
+      "query": "Which of the following is a keyword argument call?",
+      "choices": {
+        "A": "f(3, 4)",
+        "B": "f(*args)",
+        "C": "f(y=4, x=3)",
+        "D": "f(3)"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.1 — Defining & Calling Functions"
+    },
+    {
+      "query": "What does the global keyword do inside a function?",
+      "choices": {
+        "A": "Creates a local copy",
+        "B": "Imports a module",
+        "C": "Allows access to a global variable",
+        "D": "Deletes a global variable"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.2 — Scope & Namespaces"
+    },
+    {
+      "query": "A variable defined inside a function is:",
+      "choices": {
+        "A": "Global",
+        "B": "Local",
+        "C": "Built-in",
+        "D": "Free"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.2 — Scope & Namespaces"
+    },
+    {
+      "query": "What will this print: x=1; def f(): x=2; f(); print(x)?",
+      "choices": {
+        "A": "1",
+        "B": "2",
+        "C": "None",
+        "D": "Error"
+      },
+      "correctAnswer": "A",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.2 — Scope & Namespaces"
+    },
+    {
+      "query": "What is LEGB in Python?",
+      "choices": {
+        "A": "A library",
+        "B": "The scope resolution order",
+        "C": "A loop type",
+        "D": "An error type"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.2 — Scope & Namespaces"
+    },
+    {
+      "query": "What does the nonlocal keyword affect?",
+      "choices": {
+        "A": "Global scope",
+        "B": "Enclosing function scope",
+        "C": "Built-in scope",
+        "D": "Module scope"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.2 — Scope & Namespaces"
+    },
+    {
+      "query": "What is the correct syntax for a lambda that squares its input?",
+      "choices": {
+        "A": "lambda(x): x**2",
+        "B": "lambda x: x**2",
+        "C": "def lambda(x): x**2",
+        "D": "lambda = x**2"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.3 — Lambda & Built-in Functions"
+    },
+    {
+      "query": "What does sorted([3,1,2]) return?",
+      "choices": {
+        "A": "[3,1,2]",
+        "B": "[1,2,3]",
+        "C": "(1,2,3)",
+        "D": "None"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.3 — Lambda & Built-in Functions"
+    },
+    {
+      "query": "What does map(str, [1,2,3]) produce?",
+      "choices": {
+        "A": "[1,2,3]",
+        "B": "A map object of strings",
+        "C": "[str,str,str]",
+        "D": "Error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.3 — Lambda & Built-in Functions"
+    },
+    {
+      "query": "Which built-in function returns the largest item?",
+      "choices": {
+        "A": "top()",
+        "B": "high()",
+        "C": "max()",
+        "D": "largest()"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.3 — Lambda & Built-in Functions"
+    },
+    {
+      "query": "What is the output of: list(filter(lambda x: x>2, [1,2,3,4]))?",
+      "choices": {
+        "A": "[1,2]",
+        "B": "[3,4]",
+        "C": "[2,3,4]",
+        "D": "[1,2,3,4]"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.3 — Lambda & Built-in Functions"
+    },
+    {
+      "query": "Which keyword begins an exception handler?",
+      "choices": {
+        "A": "catch",
+        "B": "except",
+        "C": "handle",
+        "D": "rescue"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.4 — Exception Handling"
+    },
+    {
+      "query": "What is the purpose of the finally block?",
+      "choices": {
+        "A": "Only runs when an error occurs",
+        "B": "Only runs when no error occurs",
+        "C": "Always runs regardless of exceptions",
+        "D": "Defines a new exception"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.4 — Exception Handling"
+    },
+    {
+      "query": "What exception is raised by int('abc')?",
+      "choices": {
+        "A": "TypeError",
+        "B": "ValueError",
+        "C": "NameError",
+        "D": "SyntaxError"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.4 — Exception Handling"
+    },
+    {
+      "query": "What does raise do?",
+      "choices": {
+        "A": "Catches an exception",
+        "B": "Defines a new class",
+        "C": "Manually triggers an exception",
+        "D": "Ignores an exception"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.4 — Exception Handling"
+    },
+    {
+      "query": "Which exception is raised when dividing by zero?",
+      "choices": {
+        "A": "ValueError",
+        "B": "ArithmeticError",
+        "C": "ZeroDivisionError",
+        "D": "TypeError"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.4 — Exception Handling"
+    },
+    {
+      "query": "What is the base class of all exceptions in Python?",
+      "choices": {
+        "A": "Exception",
+        "B": "Error",
+        "C": "BaseException",
+        "D": "RuntimeError"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.5 — Exception Types & Hierarchy"
+    },
+    {
+      "query": "Which exception is raised when accessing a variable that does not exist?",
+      "choices": {
+        "A": "KeyError",
+        "B": "AttributeError",
+        "C": "NameError",
+        "D": "IndexError"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.5 — Exception Types & Hierarchy"
+    },
+    {
+      "query": "What exception does a list[99] raise on a list of size 3?",
+      "choices": {
+        "A": "KeyError",
+        "B": "ValueError",
+        "C": "IndexError",
+        "D": "TypeError"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.5 — Exception Types & Hierarchy"
+    },
+    {
+      "query": "Which exception is raised on dict['missing_key']?",
+      "choices": {
+        "A": "IndexError",
+        "B": "KeyError",
+        "C": "ValueError",
+        "D": "NameError"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.5 — Exception Types & Hierarchy"
+    },
+    {
+      "query": "What does the as keyword do in: except Exception as e?",
+      "choices": {
+        "A": "Imports the exception module",
+        "B": "Binds the exception to variable e",
+        "C": "Ignores the exception",
+        "D": "Re-raises the exception"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.5 — Exception Types & Hierarchy"
+    },
+    {
+      "query": "What is the output of: print(2 ** 3 ** 2)?",
+      "choices": {
+        "A": "64",
+        "B": "512",
+        "C": "36",
+        "D": "8"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "What does list comprehension [x**2 for x in range(4)] return?",
+      "choices": {
+        "A": "[1,4,9,16]",
+        "B": "[0,1,4,9]",
+        "C": "[0,1,2,3]",
+        "D": "[1,2,3,4]"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "Which statement correctly imports only the sqrt function from math?",
+      "choices": {
+        "A": "import math.sqrt",
+        "B": "from math import sqrt",
+        "C": "import sqrt from math",
+        "D": "include math.sqrt"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "What is the result of: bool('') and bool(0)?",
+      "choices": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "Error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "What does enumerate(['a','b','c']) return?",
+      "choices": {
+        "A": "A list of indices",
+        "B": "A list of tuples (index, value)",
+        "C": "A dict",
+        "D": "A set"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "What is the output of: x = [1,2]; y = x; y.append(3); print(x)?",
+      "choices": {
+        "A": "[1,2]",
+        "B": "[1,2,3]",
+        "C": "[3]",
+        "D": "Error"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "Which of the following creates a shallow copy of list L?",
+      "choices": {
+        "A": "L.copy()",
+        "B": "copy(L)",
+        "C": "L.deepcopy()",
+        "D": "L[::2]"
+      },
+      "correctAnswer": "A",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "What does zip([1,2],[3,4]) produce?",
+      "choices": {
+        "A": "[(1,2),(3,4)]",
+        "B": "[(1,3),(2,4)]",
+        "C": "[1,2,3,4]",
+        "D": "{1:3, 2:4}"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "What is the result of: 'abc' in 'xabcz'?",
+      "choices": {
+        "A": "False",
+        "B": "True",
+        "C": "0",
+        "D": "None"
+      },
+      "correctAnswer": "B",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    },
+    {
+      "query": "What does assert 2 + 2 == 5 raise?",
+      "choices": {
+        "A": "ValueError",
+        "B": "RuntimeError",
+        "C": "AssertionError",
+        "D": "SyntaxError"
+      },
+      "correctAnswer": "C",
+      "section": "Section 4: Functions & Exceptions",
+      "subsection": "4.6 — Mixed Practice"
+    }
+  ]
+}

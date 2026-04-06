@@ -7,7 +7,7 @@ const state = {
 
 async function init() {
 	try {
-		const res = await fetch('pcep-questions.json');
+		const res = await fetch('questions.json');
 		if (!res.ok) throw new Error(`HTTP ${res.status}`);
 		const data = await res.json();
 		state.questions = data.questions;

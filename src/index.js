@@ -1,4 +1,4 @@
-const HEADER_INTERSECTION_MARGIN_PX = 100;
+const HEADER_INTERSECTION_MARGIN_PX = 85;
 
 const ViewMode = {
 	single: 'single',
@@ -24,7 +24,13 @@ async function init() {
 		}
 		render();
 
-		document.getElementById(createQuestionIdString(state.currentIndex))?.scrollIntoView();
+		// Don't scroll if we're loading at the top of the question list (scrolling hides the section header).
+		if (state.currentIndex > 1) {
+			window.scrollTo({
+				top: document.getElementById(createQuestionIdString(state.currentIndex)).offsetTop - HEADER_INTERSECTION_MARGIN_PX,
+				behavior: 'smooth',
+			});
+		}
 
 		state.disconnectScrollWatcher = updateHashOnScroll();
 		watchForViewModeSwitch();
@@ -61,7 +67,10 @@ function watchForViewModeSwitch() {
 			if (state.mode === ViewMode.list) {
 				render();
 				state.disconnectScrollWatcher = updateHashOnScroll();
-				document.getElementById(createQuestionIdString(state.currentIndex))?.scrollIntoView();
+				window.scrollTo({
+					top: document.getElementById(createQuestionIdString(state.currentIndex)).offsetTop - HEADER_INTERSECTION_MARGIN_PX,
+					behavior: 'instant',
+				});
 			} else {
 				state.disconnectScrollWatcher();
 				render();

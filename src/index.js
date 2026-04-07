@@ -228,40 +228,6 @@ function buildCard(q, index, answered) {
     </div>`;
 }
 
-// Delegate clicks on .choice buttons
-document.addEventListener('click', (e) => {
-	const btn = e.target.closest('.choice');
-	if (!btn || btn.disabled) return;
-
-	const index = parseInt(btn.dataset.index, 10);
-	const key = btn.dataset.key;
-
-	if (state.answers[index] !== undefined) return; // already answered
-
-	state.answers[index] = key;
-	const q = state.questions[index];
-	const correct = key === q.correctAnswer;
-
-	// Re-render the card in-place (avoids full re-render flicker)
-	const oldCard = document.getElementById(createQuestionIdString(index));
-	if (!oldCard) return;
-
-	const wrapper = document.createElement('div');
-	wrapper.innerHTML = buildCard(q, index, key);
-	const newCard = wrapper.firstElementChild;
-
-	oldCard.replaceWith(newCard);
-
-	if (correct) {
-		spawnEmojis(newCard);
-	} else {
-		newCard.classList.add('shake');
-		newCard.addEventListener('animationend', () => newCard.classList.remove('shake'), { once: true });
-	}
-
-	updateScore();
-});
-
 function spawnEmojis(card) {
 	const pool = ['🎉', '✨', '⭐', '🐍', '💡', '🏆'];
 	const count = 6;
@@ -307,5 +273,69 @@ function escapeHtml(str) {
 		.replace(/>/g, '&gt;')
 		.replace(/"/g, '&quot;');
 }
+
+// Delegate clicks on .choice buttons
+document.addEventListener('click', (e) => {
+	const btn = e.target.closest('.choice');
+	if (!btn || btn.disabled) return;
+
+	const index = parseInt(btn.dataset.index, 10);
+	const key = btn.dataset.key;
+
+	if (state.answers[index] !== undefined) return; // already answered
+
+	state.answers[index] = key;
+	const q = state.questions[index];
+	const correct = key === q.correctAnswer;
+
+	// Re-render the card in-place (avoids full re-render flicker)
+	const oldCard = document.getElementById(createQuestionIdString(index));
+	if (!oldCard) return;
+
+	const wrapper = document.createElement('div');
+	wrapper.innerHTML = buildCard(q, index, key);
+	const newCard = wrapper.firstElementChild;
+
+	oldCard.replaceWith(newCard);
+
+	if (correct) {
+		spawnEmojis(newCard);
+	} else {
+		newCard.classList.add('shake');
+		newCard.addEventListener('animationend', () => newCard.classList.remove('shake'), { once: true });
+	}
+
+	updateScore();
+});
+
+// Keyboard nav
+document.addEventListener('keydown', (e) => {
+	if (state.mode !== ViewMode.single) {
+		return;
+	}
+
+	const { currentIndex, answers } = state;
+	if (e.key === 'ArrowRight' || (e.key === 'Enter' && !!answers[currentIndex])) {
+		navigate(1);
+	} else if (e.key === 'ArrowLeft') {
+		navigate(-1);
+	}
+
+	const choices = document.querySelectorAll('.choice');
+	if (choices.length !== 4) {
+		console.error(`Expected 4 choices. Found ${choices.length}.`);
+		return;
+	}
+
+	if (e.key === '1') {
+		choices[0].click();
+	} else if (e.key === '2') {
+		choices[1].click();
+	} else if (e.key === '3') {
+		choices[2].click();
+	} else if (e.key === '4') {
+		choices[3].click();
+	}
+});
 
 init();

@@ -1,18 +1,33 @@
+const HEADER_INTERSECTION_MARGIN_PX = 100;
+
+const ViewMode = {
+	single: 'single',
+	list: 'list',
+}
+
 const state = {
 	questions: [],
 	answers: {},     // { questionIndex: chosenKey }
-	mode: 'single',  // 'single' | 'list'
+	mode: ViewMode.list,
 	currentIndex: 0,
+	disconnectScrollWatcher: null,
 };
 
 async function init() {
 	try {
-		const res = await fetch('questions.json');
-		if (!res.ok) throw new Error(`HTTP ${res.status}`);
-		const data = await res.json();
-		state.questions = data.questions;
+		await fetchQuestions();
 		document.getElementById('loadingState').style.display = 'none';
+
+		const startQuestionIndex = parseQuestionIdString(window.location.hash);
+		if (startQuestionIndex >= 0 && startQuestionIndex < state.questions.length) {
+			state.currentIndex = startQuestionIndex;
+		}
 		render();
+
+		document.getElementById(createQuestionIdString(state.currentIndex))?.scrollIntoView();
+
+		state.disconnectScrollWatcher = updateHashOnScroll();
+		watchForViewModeSwitch();
 	} catch (err) {
 		const loadingContainer = document.getElementById('loadingState');
 		const errorMessage = document.createElement("p");
@@ -22,9 +37,83 @@ async function init() {
 	}
 }
 
+function createQuestionIdString(questionIndex) {
+	return `card-${questionIndex + 1}`;
+}
+
+// No index bounds checking.
+function parseQuestionIdString(hash) {
+	const [, questionIndex] = hash.split('-');
+	return questionIndex && parseInt(questionIndex) - 1;
+}
+
+function watchForViewModeSwitch() {
+	const modeButtons = document.querySelectorAll('.mode-btn');
+	for (const btn of modeButtons) {
+		btn.addEventListener('click', () => {
+			if (btn.dataset.mode === state.mode) return;
+			state.mode = btn.dataset.mode;
+
+			for (const b of modeButtons) {
+				b.classList.toggle('active', b === btn)
+			}
+
+			if (state.mode === ViewMode.list) {
+				render();
+				state.disconnectScrollWatcher = updateHashOnScroll();
+				document.getElementById(createQuestionIdString(state.currentIndex))?.scrollIntoView();
+			} else {
+				state.disconnectScrollWatcher();
+				render();
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}
+
+		});
+	}
+}
+
+async function fetchQuestions() {
+	const res = await fetch('questions.json');
+	if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+	const data = await res.json();
+	state.questions = data.questions;
+}
+
+function updateHashOnScroll() {
+	const questionCards = document.querySelectorAll('.question-card');
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			// Update the hash when the entry's top leaves the viewport (respecting the header).
+			if (entry.isIntersecting && entry.boundingClientRect.top < HEADER_INTERSECTION_MARGIN_PX) {
+				const newHash = `#${entry.target.id}`;
+
+				if (window.location.hash !== newHash) {
+					const questionIdx = parseQuestionIdString(entry.target.id);
+					state.currentIndex = questionIdx >= 0 && questionIdx < state.questions.length ? questionIdx : 0;
+					history.replaceState(null, null, newHash);
+				}
+			}
+		});
+	}, {
+		root: null,
+		rootMargin: `-${HEADER_INTERSECTION_MARGIN_PX}px`,
+		threshold: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+	});
+
+	for (const card of questionCards) {
+		observer.observe(card);
+	}
+
+	return () => {
+		observer.disconnect();
+	};
+}
+
 function render() {
 	const app = document.getElementById('app');
-	if (state.mode === 'single') {
+	if (state.mode === ViewMode.single) {
 		app.innerHTML = buildSingleView();
 	} else {
 		app.innerHTML = buildListView();
@@ -123,7 +212,7 @@ function buildCard(q, index, answered) {
 	}
 
 	return `
-    <div class="question-card ${statusClass}" id="card-${index}">
+    <div class="question-card ${statusClass}" id="${createQuestionIdString(index)}">
       <div class="question-text">${escapeHtml(q.query)}</div>
       <div class="choices">${choicesHtml}</div>
       ${feedbackHtml}
@@ -145,7 +234,7 @@ document.addEventListener('click', (e) => {
 	const correct = key === q.correctAnswer;
 
 	// Re-render the card in-place (avoids full re-render flicker)
-	const oldCard = document.getElementById(`card-${index}`);
+	const oldCard = document.getElementById(createQuestionIdString(index));
 	if (!oldCard) return;
 
 	const wrapper = document.createElement('div');
@@ -162,11 +251,6 @@ document.addEventListener('click', (e) => {
 	}
 
 	updateScore();
-
-	// In single mode, auto-advance after correct
-	if (correct && state.mode === 'single') {
-		setTimeout(() => navigate(1), 1300);
-	}
 });
 
 function spawnEmojis(card) {
@@ -186,8 +270,14 @@ function spawnEmojis(card) {
 function navigate(dir) {
 	const next = state.currentIndex + dir;
 	if (next < 0 || next >= state.questions.length) return;
+
 	state.currentIndex = next;
 	render();
+
+	const newHash = `#${document.querySelector('.question-card').id}`;
+	if (window.location.hash !== newHash) {
+		history.replaceState(null, null, newHash);
+	}
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -200,18 +290,6 @@ function updateScore() {
 	document.getElementById('scoreCorrect').textContent = correct;
 	document.getElementById('scoreAnswered').textContent = answered.length;
 }
-
-document.querySelectorAll('.mode-btn').forEach(btn => {
-	btn.addEventListener('click', () => {
-		if (btn.dataset.mode === state.mode) return;
-		state.mode = btn.dataset.mode;
-		document.querySelectorAll('.mode-btn').forEach(b =>
-			b.classList.toggle('active', b === btn)
-		);
-		render();
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	});
-});
 
 function escapeHtml(str) {
 	return str

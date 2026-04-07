@@ -126,7 +126,7 @@ function buildSingleView() {
 	const q = questions[currentIndex];
 	const answered = answers[currentIndex];
 	const total = questions.length;
-	const pct = (currentIndex / (total - 1)) * 100;
+	const pct = (currentIndex + 1) / total * 100;
 	const isFirst = currentIndex === 0;
 	const isLast = currentIndex === total - 1;
 

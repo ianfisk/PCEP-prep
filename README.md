@@ -1,3 +1,3 @@
 # PCEP Prep Questions
 
-For students to study for the PCEP certification.
+A short and sweet app created for my students to study for the PCEP certification.
